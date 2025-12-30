@@ -88,8 +88,8 @@ Follow these steps to run the project locally:
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/MeesamBukhari/Student-Information-Portal.git
-cd Student-Information-Portal
+git clone https://github.com/MeesamBukhari/FSD-A3-Student-Portal.git
+cd FSD-A3-Student-Portal
 ```
 
 ### 2️⃣ Create a virtual environment
@@ -164,3 +164,4 @@ Feel free to modify and use it for your learning or personal projects.
 ---
 
 ⭐ _If you found this project helpful, don’t forget to star the repo!_
+
