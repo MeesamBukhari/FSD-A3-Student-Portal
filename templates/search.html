@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Student - Student Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎓 Student Information Portal</h1>
+            <p class="subtitle">Search Student by Roll Number</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('add_student') }}" class="nav-link">Add Student</a>
+            <a href="{{ url_for('view_students') }}" class="nav-link">View Students</a>
+            <a href="{{ url_for('search_student') }}" class="nav-link active">Search</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {% if category == 'success' %}
+                                ✓
+                            {% else %}
+                                ✗
+                            {% endif %}
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <!-- Search Section -->
+            <div class="search-container">
+                <!-- Search Form -->
+                <div class="search-box">
+                    <h2>🔍 Find a Student</h2>
+                    <p class="form-description">Enter the roll number to search for a specific student.</p>
+
+                    <form method="POST" action="{{ url_for('search_student') }}" class="search-form">
+                        <div class="form-group">
+                            <label for="roll_no">Roll Number</label>
+                            <div class="search-input-group">
+                                <input 
+                                    type="text" 
+                                    id="roll_no" 
+                                    name="roll_no" 
+                                    placeholder="Enter roll number (e.g., CS101)"
+                                    required
+                                    class="form-control search-input"
+                                    autofocus
+                                >
+                                <button type="submit" class="btn btn-primary search-btn">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Search Results -->
+                {% if student %}
+                    <!-- Student Found -->
+                    <div class="search-result">
+                        <div class="result-header">
+                            <span class="success-icon">✓</span>
+                            <h3>Student Found</h3>
+                        </div>
+                        
+                        <div class="student-card">
+                            <div class="student-avatar-large">
+                                {{ student.name[0].upper() }}
+                            </div>
+                            <div class="student-details">
+                                <h2>{{ student.name }}</h2>
+                                <div class="detail-row">
+                                    <span class="detail-label">Roll Number:</span>
+                                    <span class="badge badge-large">{{ student.roll_no }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Department:</span>
+                                    <span class="detail-value">{{ student.department }}</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Email:</span>
+                                    <a href="mailto:{{ student.email }}" class="email-link">{{ student.email }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% elif request.method == 'POST' %}
+                    <!-- Student Not Found (only show after form submission) -->
+                    <div class="search-result no-result">
+                        <div class="result-header error">
+                            <span class="error-icon">✗</span>
+                            <h3>Student Not Found</h3>
+                        </div>
+                        <p>No student with the provided roll number exists in the system.</p>
+                        <div class="no-result-actions">
+                            <a href="{{ url_for('view_students') }}" class="btn btn-secondary">View All Students</a>
+                            <a href="{{ url_for('add_student') }}" class="btn btn-primary">Add New Student</a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Student Information Portal | Full Stack Development Assignment</p>
+        </footer>
+    </div>
+</body>
+</html>

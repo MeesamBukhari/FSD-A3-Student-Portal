@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Student - Student Portal</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1>🎓 Student Information Portal</h1>
+        <p class="subtitle">Add New Student Record</p>
+      </header>
+
+      <!-- Navigation -->
+      <nav>
+        <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+        <a href="{{ url_for('add_student') }}" class="nav-link active"
+          >Add Student</a
+        >
+        <a href="{{ url_for('view_students') }}" class="nav-link"
+          >View Students</a
+        >
+        <a href="{{ url_for('search_student') }}" class="nav-link">Search</a>
+      </nav>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {% if category == 'success' %} ✓ {% else %} ✗ {% endif %} {{ message
+          }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+
+        <div class="form-section">
+          <h2>➕ Register New Student</h2>
+          <p class="form-description">
+            Enter the complete details of the student below. Roll number must be
+            unique.
+          </p>
+
+          <form
+            method="POST"
+            action="{{ url_for('add_student') }}"
+            class="add-form"
+          >
+            <div class="form-group">
+              <label for="name">Student Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="e.g., Muhammad Ali"
+                class="form-control"
+                autofocus
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="roll_no">Roll Number</label>
+              <input
+                type="text"
+                id="roll_no"
+                name="roll_no"
+                required
+                placeholder="e.g., CS-20F-101"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <input
+                type="text"
+                id="department"
+                name="department"
+                required
+                placeholder="e.g., Computer Science"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="e.g., student@iast.edu.pk"
+                class="form-control"
+              />
+            </div>
+
+            <button
+              type="submit"
+              style="margin: 15px 0 10px 0"
+              class="btn btn-primary form-submit-btn"
+            >
+              Add Student Record
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>
+          &copy; 2025 Student Information Portal | Full Stack Development
+          Assignment
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

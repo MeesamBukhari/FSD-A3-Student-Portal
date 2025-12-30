@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Students - Student Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎓 Student Information Portal</h1>
+            <p class="subtitle">All Registered Student Records</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('add_student') }}" class="nav-link">Add Student</a>
+            <a href="{{ url_for('view_students') }}" class="nav-link active">View Students</a>
+            <a href="{{ url_for('search_student') }}" class="nav-link">Search</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {% if category == 'success' %}
+                                ✓
+                            {% else %}
+                                ✗
+                            {% endif %}
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <div class="records-section">
+                <h2>👥 Student Directory</h2>
+
+                {% if students and students|length > 0 %}
+                    <p class="record-summary">Total Records: <span class="badge">{{ students|length }}</span></p>
+                    <div class="table-responsive">
+                        <table class="student-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Roll No</th>
+                                    <th>Department</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for student in students %}
+                                    <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td data-label="Name">{{ student.name }}</td>
+                                        <td data-label="Roll No">{{ student.roll_no }}</td>
+                                        <td data-label="Department">{{ student.department }}</td>
+                                        <td data-label="Email"><a href="mailto:{{ student.email }}">{{ student.email }}</a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <div class="empty-state">
+                        <span class="empty-icon">⚠️</span>
+                        <h3>No Students Found</h3>
+                        <p>The student directory is currently empty. Please use the link below to start adding records.</p>
+                        <a href="{{ url_for('add_student') }}" class="btn btn-primary">Add First Student</a>
+                    </div>
+                {% endif %}
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Student Information Portal | Full Stack Development Assignment</p>
+        </footer>
+    </div>
+</body>
+</html>

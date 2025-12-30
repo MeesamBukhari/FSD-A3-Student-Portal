@@ -1,0 +1,254 @@
+[
+    {
+        "name": "Muhammad Ali Raza",
+        "roll_no": "CS085",
+        "department": "Computer Science",
+        "email": "b23f0152cs085@paf-iast.edu.pk"
+    },
+    {
+        "name": "Rania Khan",
+        "roll_no": "CS073",
+        "department": "Computer Science",
+        "email": "B23F0082CS073@paf-iast.edu.pk"
+    },
+    {
+        "name": "Eman Altaf",
+        "roll_no": "CS089",
+        "department": "Computer Science",
+        "email": "B23F0277CS089@paf-iast.edu.pk"
+    },
+    {
+        "name": "Atraab Noor",
+        "roll_no": "CS082",
+        "department": "Computer Science",
+        "email": "B23F0222CS082@paf-iast.edu.pk"
+    },
+    {
+        "name": "Abu Bakar Rizwan",
+        "roll_no": "CS060",
+        "department": "Computer Science",
+        "email": "B23F0001CS060@paf-iast.edu.pk"
+    },
+    {
+        "name": "Eman Babar",
+        "roll_no": "CS170",
+        "department": "Computer Science",
+        "email": "b23f0271cs170@paf-iast.edu.pk"
+    },
+    {
+        "name": "Irum Imran",
+        "roll_no": "CS075",
+        "department": "Computer Science",
+        "email": "B23F0191CS075@PAF-IAST.edu.pk"
+    },
+    {
+        "name": "Ibrahim Khan",
+        "roll_no": "CS098",
+        "department": "Computer Science",
+        "email": "B23F0183CS098@paf-iast.edu.pk"
+    },
+    {
+        "name": "Memoona Shafiq",
+        "roll_no": "CS086",
+        "department": "Computer Science",
+        "email": "B23F0555CS086@paf-iast.edu.pk"
+    },
+    {
+        "name": "Hamza Bashir",
+        "roll_no": "CS054",
+        "department": "Computer Science",
+        "email": "b23f0001cs054@paf-iast.edu.pk"
+    },
+    {
+        "name": "Najam Iqbal",
+        "roll_no": "CS058",
+        "department": "Computer Science",
+        "email": "B23F0001CS058@paf-iast.edu.pk"
+    },
+    {
+        "name": "Abdullah Mushtaq",
+        "roll_no": "CS066",
+        "department": "Computer Science",
+        "email": "B23F0249CS066@paf-iast.edu.pk"
+    },
+    {
+        "name": "Ashar Zahid",
+        "roll_no": "CS081",
+        "department": "Computer Science",
+        "email": "B23F0015CS081@paf-iast.edu.pk"
+    },
+    {
+        "name": "Abdul Hannan",
+        "roll_no": "CS092",
+        "department": "Computer Science",
+        "email": "b23f0121cs092@paf-iast.edu.pk"
+    },
+    {
+        "name": "Areesh Fatima",
+        "roll_no": "CS095",
+        "department": "Computer Science",
+        "email": "B23F0568CS095@paf-iast.edu.pk"
+    },
+    {
+        "name": "Abdullah Khalid",
+        "roll_no": "CS094",
+        "department": "Computer Science",
+        "email": "B23F0146CS094@paf-iast.edu.pk"
+    },
+    {
+        "name": "Manahil Zahra",
+        "roll_no": "CS097",
+        "department": "Computer Science",
+        "email": "B23F0341CS097@paf-iast.edu.pk"
+    },
+    {
+        "name": "Muaz ullah",
+        "roll_no": "CS059",
+        "department": "Computer Science",
+        "email": "B23F0001CS059@paf-iast.edu.pk"
+    },
+    {
+        "name": "Ahmad Hassan",
+        "roll_no": "CS100",
+        "department": "Computer Science",
+        "email": "B23F0127CS100@paf_iast.edu.pk"
+    },
+    {
+        "name": "Syed Meesam Turab Bukhari",
+        "roll_no": "CS064",
+        "department": "Computer Science",
+        "email": "B23F0120CS064@paf-iast.edu.pk"
+    },
+    {
+        "name": "Syeda Rija Fatima Bukhari",
+        "roll_no": "CS091",
+        "department": "Computer Science",
+        "email": "B23F0222CS091@paf-iast.edu.pk"
+    },
+    {
+        "name": "Talal Shah",
+        "roll_no": "CS057",
+        "department": "Computer Science",
+        "email": "B23F0001CS057@paf-iast.edu.pk"
+    },
+    {
+        "name": "Haris Anwar Lodhi",
+        "roll_no": "CS093",
+        "department": "Computer Science",
+        "email": "B23F0456CS093@paf-iast.edu.pk"
+    },
+    {
+        "name": "Maria Shafique",
+        "roll_no": "CS172",
+        "department": "Computer Science",
+        "email": "B23F0201CS172@paf-iast.edu.pk"
+    },
+    {
+        "name": "Qazi Furqan",
+        "roll_no": "CS168",
+        "department": "Computer Science",
+        "email": "B23F0660CS168@paf-iast.edu.pk"
+    },
+    {
+        "name": "Qazi Absaar Baseer Ud din",
+        "roll_no": "CS069",
+        "department": "Computer Science",
+        "email": "B23F0054CS069@paf-iast.edu.pk"
+    },
+    {
+        "name": "Rania Khan",
+        "roll_no": "CS073",
+        "department": "Computer Science",
+        "email": "B23F0082CS073@paf-iast.edu.pk"
+    },
+    {
+        "name": "Emaan Khizar",
+        "roll_no": "CS084",
+        "department": "Computer Science",
+        "email": "B23F0350CS084@paf-iast.edu.pk"
+    },
+    {
+        "name": "Qazi Shadab Ahmed",
+        "roll_no": "CS087",
+        "department": "Computer Science",
+        "email": "B23F0638CS087@paf-iast.edu.pk"
+    },
+    {
+        "name": "Muhammad Ali Raza",
+        "roll_no": "CS085",
+        "department": "Computer Science",
+        "email": "b23f0152cs085@paf-iast.edu.pk"
+    },
+    {
+        "name": "Maaz Sajid",
+        "roll_no": "CS061",
+        "department": "Computer Science",
+        "email": "B23F0001CS061@PAF-IAST.edu.pk"
+    },
+    {
+        "name": "Moawiz Sajid",
+        "roll_no": "CS062",
+        "department": "Computer Science",
+        "email": "B23F0001CS062@paf-iast.edu.pk"
+    },
+    {
+        "name": "Maman Ijaz",
+        "roll_no": "CS056",
+        "department": "Computer Science",
+        "email": "B23F0001CS056@paf-iast.edu.pk"
+    },
+    {
+        "name": "Mubina zahid",
+        "roll_no": "CS077",
+        "department": "Computer Science",
+        "email": "B23F0014CS077@paf-iast.edu.pk"
+    },
+    {
+        "name": "M fawaz asif",
+        "roll_no": "CS070",
+        "department": "Computer Science",
+        "email": "B23F0115CS070@paf-iast.edu.pk"
+    },
+    {
+        "name": "Pir Ayaan Ali Shah",
+        "roll_no": "CS076",
+        "department": "Computer Science",
+        "email": "B23F0308CS076@paf-iast.edu.pk"
+    },
+    {
+        "name": "Mehmood Ejaz",
+        "roll_no": "CS055",
+        "department": "Computer Science",
+        "email": "B23F0001CS055@paf-iast.edu.pk"
+    },
+    {
+        "name": "Eman Altaf",
+        "roll_no": "CS089",
+        "department": "Computer Science",
+        "email": "B23F0277CS089@PAF-IAST.edu.pk"
+    },
+    {
+        "name": "Sania Aijaz",
+        "roll_no": "CS090",
+        "department": "Computer Science",
+        "email": "B23F0285CS090@paf-iast.edu.pk"
+    },
+    {
+        "name": "syed agha",
+        "roll_no": "CS068",
+        "department": "Computer Science",
+        "email": "B23F0564CS068@paf-iast.edu.pk"
+    },
+    {
+        "name": "Ifrakhan",
+        "roll_no": "CS079",
+        "department": "Computer Science",
+        "email": "B23F0484CS079@paf-iast.edu.pk"
+    },
+    {
+        "name": "Waqas Hussain Shah",
+        "roll_no": "CS169",
+        "department": "Computer Science",
+        "email": "B23F0574CS169@paf-iast.edu.pk"
+    }
+]
